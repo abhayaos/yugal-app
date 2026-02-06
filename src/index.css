@@ -1,1 +1,11 @@
-@import 'tailwindcss'
+@import 'tailwindcss';
+
+body{
+  @apply bg-gray-900;
+  @apply text-white;
+  @apply font-sans;
+  @apply leading-relaxed;
+  @apply tracking-tight;
+  @apply antialiased;
+  @apply overflow-x-hidden;
+}

@@ -1,27 +1,29 @@
-import React, { useEffect } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Home from './pages/Home';
-import Header from './components/Header';
-import Navbar from './components/Navbar';
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import Layout from "./components/Layout";
+import Home from "./pages/Home";
+import Profile from "./pages/Profile";
+import EditProfile from "./pages/EditProfile";
+import Settings from "./pages/Settings";
+import Matches from "./pages/Matches";
+import Messages from "./Messages/Messages";
+import NotFound from "./pages/NotFound";
 
 function App() {
-  useEffect(() => {
-    // Simple mobile check
-    const isMobile = /Mobi|Android/i.test(navigator.userAgent);
-
-    if (!isMobile) {
-      // If not mobile (i.e., desktop), redirect
-      window.location.href = 'https://yugalmeet.com';
-    }
-  }, []);
-
   return (
-    <BrowserRouter>
-      <Header />
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-      </Routes>
+    <BrowserRouter> {/* <-- Must wrap everything */}
+      <Layout>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/edit-profile" element={<EditProfile />} />
+          <Route path="/settings" element={<Settings />} />
+          <Route path="/matches" element={<Matches />} />
+          <Route path="/messages" element={<Messages />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </Layout>
     </BrowserRouter>
   );
 }

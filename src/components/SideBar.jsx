@@ -17,8 +17,7 @@ function SideBar() {
       {/* Top */}
       <div className="flex flex-col items-center gap-8">
         {/* Logo */}
-        <span className="text-xl font-bold">YM</span>
-
+        <img src="/logo.png" className="h-8" alt="YM Logo" />
         {/* Menu */}
         <ul className="flex flex-col items-center gap-6 mt-8 w-full">
           {menuItems.map((item, index) => (

@@ -13,7 +13,7 @@ function Layout({ children }) {
 
       {/* Mobile Header */}
       <div className="md:hidden fixed top-0 left-0 w-full bg-white z-40 flex items-center justify-between p-4 shadow-md">
-        <h1 className="text-xl font-bold">YM</h1>
+        <h1 className="text-xl font-bold"><img src="/logo.png" className="h-8" alt="" /></h1>
         <button onClick={() => setSidebarOpen(true)} className="p-2">
           <Menu size={24} />
         </button>

@@ -9,6 +9,7 @@ import Settings from "./pages/Settings";
 import Matches from "./pages/Matches";
 import Messages from "./Messages/Messages";
 import NotFound from "./pages/NotFound";
+import Auth from "./pages/Auth";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="/settings" element={<Settings />} />
           <Route path="/matches" element={<Matches />} />
           <Route path="/messages" element={<Messages />} />
+          <Route path="/auth" element={<Auth />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Layout>
